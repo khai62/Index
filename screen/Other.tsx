@@ -4,7 +4,8 @@ import {
     View,
     Text,
     ScrollView,
-    StyleSheet
+    StyleSheet,
+    StatusBar,
 } from 'react-native'
 
 interface interfaceData {
@@ -104,45 +105,150 @@ const Edit: interfaceData[] = [
         routeName: '',
     },
 ];
+const scan: interfaceData[] = [
+    {
+        icon: 'card-account-details',
+        title: 'IDCard ',
+        color: 'blue',
+        routeName: '',
+    },
+    {
+        icon: 'text-recognition',
+        title: 'OCR ',
+        color: 'green',
+        routeName: '',
+    },
+    {
+        icon: 'badge-account',
+        title: 'Passport photo',
+        color: 'orange',
+        routeName: '',
+    },
+    {
+        icon: 'file-document-edit',
+        title: 'Exercise',
+        color: 'aqua',
+        routeName: '',
+    },
+    {
+        icon: 'book-open-variant',
+        title: 'Book',
+        color: 'blue',
+        routeName: '',
+    },
+    {
+        icon: 'projector-screen',
+        title: 'PPT',
+        color: 'green',
+        routeName: '',
+    },
+    {
+        icon: 'image-plus',
+        title: 'Import Images',
+        color: 'green',
+        routeName: '',
+    },
+    {
+        icon: 'presentation',
+        title: 'Whiteboard Photo',
+        color: 'green',
+        routeName: '',
+    },
+];
+
+const other: interfaceData[] = [
+    {
+        icon: 'qrcode-scan',
+        title: 'QR Code',
+        color: 'green',
+        routeName: '',
+    }
+];
 
 
 
 const Other: React.FC = () => {
     return (
-        <ScrollView style={styles.scroll}>
-            <Text style={styles.tex}>Conversion</Text>
-            <View style={styles.viewkonpersi}>
-                {konpersi.map((item, konfersi) => (
-                    <View style={styles.viewIconButton}>
-                        <IconButton
-                            key={konfersi}
-                            icon={item.icon}
-                            size={30}
-                            iconColor={item.color}
-                            mode='contained-tonal'
-                            onPress={() => alert('belum selesai')}
-                        />
-                        <Text>{item.title}</Text>
-                    </View>
-                ))}
+        <ScrollView>
+            <StatusBar backgroundColor='transparent' />
+            <View style={styles.scroll}>
+                {/* ---------------------- Conversion ----------  */}
 
-            </View>
-            <Text style={styles.tex}>Edit</Text>
-            <View style={styles.viewkonpersi}>
-                {Edit.map((item, edit) => (
-                    <View style={styles.viewIconButton}>
-                        <IconButton
-                            key={edit}
-                            icon={item.icon}
-                            size={30}
-                            iconColor={item.color}
-                            mode='contained-tonal'
-                            onPress={() => alert('belum selesai')}
-                        />
-                        <Text>{item.title}</Text>
-                    </View>
-                ))}
+                <Text style={styles.tex}>Conversion</Text>
+                <View style={styles.viewkonpersi}>
+                    {konpersi.map((item) => (
+                        <View style={styles.viewIconButton}>
+                            <IconButton
+                                // key={konfersi}
+                                icon={item.icon}
+                                size={30}
+                                iconColor={item.color}
+                                mode='contained-tonal'
+                                onPress={() => alert('belum selesai')}
+                            />
+                            <Text style={styles.teks}>{item.title}</Text>
+                        </View>
+                    ))}
 
+                </View>
+
+                {/* ---------------------- edit ----------  */}
+
+                <Text style={styles.tex}>Edit</Text>
+                <View style={styles.viewkonpersi}>
+                    {Edit.map((item) => (
+                        <View style={styles.viewIconButton}>
+                            <IconButton
+                                // key={edit} 
+                                icon={item.icon}
+                                size={30}
+                                iconColor={item.color}
+                                mode='contained-tonal'
+                                onPress={() => alert('belum selesai')}
+                            />
+                            <Text style={styles.teks}>{item.title}</Text>
+                        </View>
+                    ))}
+
+                </View>
+
+                {/* ---------------------- scan----------  */}
+
+                <Text style={styles.tex}>Scan</Text>
+                <View style={styles.viewkonpersi}>
+                    {scan.map((item) => (
+                        <View style={styles.viewIconButton}>
+                            <IconButton
+                                // key={edit} 
+                                icon={item.icon}
+                                size={30}
+                                iconColor={item.color}
+                                mode='contained-tonal'
+                                onPress={() => alert('belum selesai')}
+                            />
+                            <Text style={styles.teks}>{item.title}</Text>
+                        </View>
+                    ))}
+
+                </View>
+
+                {/* ---------------------- Other ----------  */}
+
+                <Text style={styles.tex}>Other</Text>
+                <View style={styles.viewkonpersi}>
+                    {other.map((item) => (
+                        <View style={styles.viewIconButton}>
+                            <IconButton
+                                icon={item.icon}
+                                size={30}
+                                iconColor={item.color}
+                                mode='contained-tonal'
+                                onPress={() => alert('belum selesai')}
+                            />
+                            <Text style={styles.teks}>{item.title}</Text>
+                        </View>
+                    ))}
+                </View>
             </View>
         </ScrollView>
     )
@@ -152,12 +258,17 @@ const styles = StyleSheet.create({
     scroll: {
         flex: 1,
         paddingHorizontal: 20,
-        paddingVertical: 20,
+        paddingTop: 20,
+        paddingBottom: 90,
         backgroundColor: 'white'
     },
     tex: {
         fontWeight: 'bold',
         fontSize: 18,
+    },
+    teks: {
+        width: 50,
+        textAlign: 'center',
     },
     viewkonpersi: {
         flexDirection: 'row',
