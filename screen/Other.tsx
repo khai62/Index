@@ -9,6 +9,7 @@ import {
 } from 'react-native'
 
 interface interfaceData {
+    key: string;
     icon: string;
     title: string;
     routeName: string;
@@ -17,42 +18,50 @@ interface interfaceData {
 
 const konpersi: interfaceData[] = [
     {
+
+        key: 'word',
         icon: 'microsoft-word',
         title: 'To Word',
         color: 'blue',
         routeName: '',
     },
     {
+        key: 'xl',
         icon: 'microsoft-excel',
         title: 'To Excel',
         color: 'green',
         routeName: '',
     },
     {
+        key: 'ppt',
         icon: 'microsoft-powerpoint',
         title: 'To PPT',
         color: 'orange',
         routeName: '',
     },
     {
+        key: 'mul',
         icon: 'hexagon-multiple',
         title: 'CountCam',
         color: 'aqua',
         routeName: '',
     },
     {
+        key: 'smart',
         icon: 'eraser',
         title: 'Smart Delete',
         color: 'blue',
         routeName: '',
     },
     {
+        key: 'img',
         icon: 'image',
         title: 'PDF To Image',
         color: 'green',
         routeName: '',
     },
     {
+        key: 'alb',
         icon: 'image-album',
         title: 'PDF To Long Image',
         color: 'orange',
@@ -63,42 +72,49 @@ const konpersi: interfaceData[] = [
 
 const Edit: interfaceData[] = [
     {
+        key: 'im',
         icon: 'file-import',
         title: 'Import',
         color: 'blue',
         routeName: '',
     },
     {
+        key: 'draw',
         icon: 'draw',
         title: 'Signature',
         color: 'green',
         routeName: '',
     },
     {
+        key: 'wat',
         icon: 'watermark',
         title: 'Watermark',
         color: 'orange',
         routeName: '',
     },
     {
+        key: 'mar',
         icon: 'table-merge-cells',
         title: 'Merge PDF',
         color: 'aqua',
         routeName: '',
     },
     {
+        key: 'spl',
         icon: 'table-split-cell',
         title: 'Split PDF ',
         color: 'blue',
         routeName: '',
     },
     {
+        key: 'fl',
         icon: 'file-cog',
         title: 'Organize PDF',
         color: 'green',
         routeName: '',
     },
     {
+        key: 'sun',
         icon: 'shield-sun',
         title: 'PDF Protection',
         color: 'green',
@@ -107,48 +123,56 @@ const Edit: interfaceData[] = [
 ];
 const scan: interfaceData[] = [
     {
+        key: 'det',
         icon: 'card-account-details',
         title: 'IDCard ',
         color: 'blue',
         routeName: '',
     },
     {
+        key: 'oct',
         icon: 'text-recognition',
         title: 'OCR ',
         color: 'green',
         routeName: '',
     },
     {
+        key: 'pho',
         icon: 'badge-account',
         title: 'Passport photo',
         color: 'orange',
         routeName: '',
     },
     {
+        key: 'edt',
         icon: 'file-document-edit',
         title: 'Exercise',
         color: 'aqua',
         routeName: '',
     },
     {
+        key: 'bok',
         icon: 'book-open-variant',
         title: 'Book',
         color: 'blue',
         routeName: '',
     },
     {
+        key: 'scn',
         icon: 'projector-screen',
         title: 'PPT',
         color: 'green',
         routeName: '',
     },
     {
+        key: 'pls',
         icon: 'image-plus',
         title: 'Import Images',
         color: 'green',
         routeName: '',
     },
     {
+        key: 'pts',
         icon: 'presentation',
         title: 'Whiteboard Photo',
         color: 'green',
@@ -158,6 +182,7 @@ const scan: interfaceData[] = [
 
 const other: interfaceData[] = [
     {
+        key: 'cod',
         icon: 'qrcode-scan',
         title: 'QR Code',
         color: 'green',
@@ -179,7 +204,7 @@ const Other: React.FC = () => {
                     {konpersi.map((item) => (
                         <View style={styles.viewIconButton}>
                             <IconButton
-                                // key={konfersi}
+                                key={item.key}
                                 icon={item.icon}
                                 size={30}
                                 iconColor={item.color}
@@ -199,7 +224,7 @@ const Other: React.FC = () => {
                     {Edit.map((item) => (
                         <View style={styles.viewIconButton}>
                             <IconButton
-                                // key={edit} 
+                                key={item.key}
                                 icon={item.icon}
                                 size={30}
                                 iconColor={item.color}
@@ -219,7 +244,7 @@ const Other: React.FC = () => {
                     {scan.map((item) => (
                         <View style={styles.viewIconButton}>
                             <IconButton
-                                // key={edit} 
+                                key={item.key}
                                 icon={item.icon}
                                 size={30}
                                 iconColor={item.color}
@@ -239,6 +264,7 @@ const Other: React.FC = () => {
                     {other.map((item) => (
                         <View style={styles.viewIconButton}>
                             <IconButton
+                                key={item.key}
                                 icon={item.icon}
                                 size={30}
                                 iconColor={item.color}
