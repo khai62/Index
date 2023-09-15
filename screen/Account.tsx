@@ -71,7 +71,7 @@ const Account: React.FC = () => {
                         </TouchableOpacity>
                     </View>
                     <View style={styles.view_khai}>
-                        <Text style={styles.My_text}>Prof. Dr. Khairuddin, M.Sc., Ph.D.</Text>
+                        <Text style={styles.My_text}>Prof. Khairuddin, M.Sc., Ph.D.</Text>
                     </View>
                 </View>
             </LinearGradient>

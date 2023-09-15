@@ -9,7 +9,7 @@ import {
 } from 'react-native'
 
 interface interfaceData {
-    key: string;
+    id: number;
     icon: string;
     title: string;
     routeName: string;
@@ -19,49 +19,49 @@ interface interfaceData {
 const konpersi: interfaceData[] = [
     {
 
-        key: 'word',
+        id: 1,
         icon: 'microsoft-word',
         title: 'To Word',
         color: 'blue',
         routeName: '',
     },
     {
-        key: 'xl',
+        id: 2,
         icon: 'microsoft-excel',
         title: 'To Excel',
         color: 'green',
         routeName: '',
     },
     {
-        key: 'ppt',
+        id: 3,
         icon: 'microsoft-powerpoint',
         title: 'To PPT',
         color: 'orange',
         routeName: '',
     },
     {
-        key: 'mul',
+        id: 4,
         icon: 'hexagon-multiple',
         title: 'CountCam',
         color: 'aqua',
         routeName: '',
     },
     {
-        key: 'smart',
+        id: 5,
         icon: 'eraser',
         title: 'Smart Delete',
         color: 'blue',
         routeName: '',
     },
     {
-        key: 'img',
+        id: 6,
         icon: 'image',
         title: 'PDF To Image',
         color: 'green',
         routeName: '',
     },
     {
-        key: 'alb',
+        id: 7,
         icon: 'image-album',
         title: 'PDF To Long Image',
         color: 'orange',
@@ -72,49 +72,49 @@ const konpersi: interfaceData[] = [
 
 const Edit: interfaceData[] = [
     {
-        key: 'im',
+        id: 8,
         icon: 'file-import',
         title: 'Import',
         color: 'blue',
         routeName: '',
     },
     {
-        key: 'draw',
+        id: 9,
         icon: 'draw',
         title: 'Signature',
         color: 'green',
         routeName: '',
     },
     {
-        key: 'wat',
+        id: 10,
         icon: 'watermark',
         title: 'Watermark',
         color: 'orange',
         routeName: '',
     },
     {
-        key: 'mar',
+        id: 11,
         icon: 'table-merge-cells',
         title: 'Merge PDF',
         color: 'aqua',
         routeName: '',
     },
     {
-        key: 'spl',
+        id: 12,
         icon: 'table-split-cell',
         title: 'Split PDF ',
         color: 'blue',
         routeName: '',
     },
     {
-        key: 'fl',
+        id: 13,
         icon: 'file-cog',
         title: 'Organize PDF',
         color: 'green',
         routeName: '',
     },
     {
-        key: 'sun',
+        id: 14,
         icon: 'shield-sun',
         title: 'PDF Protection',
         color: 'green',
@@ -123,56 +123,56 @@ const Edit: interfaceData[] = [
 ];
 const scan: interfaceData[] = [
     {
-        key: 'det',
+        id: 15,
         icon: 'card-account-details',
         title: 'IDCard ',
         color: 'blue',
         routeName: '',
     },
     {
-        key: 'oct',
+        id: 16,
         icon: 'text-recognition',
         title: 'OCR ',
         color: 'green',
         routeName: '',
     },
     {
-        key: 'pho',
+        id: 17,
         icon: 'badge-account',
         title: 'Passport photo',
         color: 'orange',
         routeName: '',
     },
     {
-        key: 'edt',
+        id: 18,
         icon: 'file-document-edit',
         title: 'Exercise',
         color: 'aqua',
         routeName: '',
     },
     {
-        key: 'bok',
+        id: 19,
         icon: 'book-open-variant',
         title: 'Book',
         color: 'blue',
         routeName: '',
     },
     {
-        key: 'scn',
+        id: 20,
         icon: 'projector-screen',
         title: 'PPT',
         color: 'green',
         routeName: '',
     },
     {
-        key: 'pls',
+        id: 21,
         icon: 'image-plus',
         title: 'Import Images',
         color: 'green',
         routeName: '',
     },
     {
-        key: 'pts',
+        id: 22,
         icon: 'presentation',
         title: 'Whiteboard Photo',
         color: 'green',
@@ -182,7 +182,7 @@ const scan: interfaceData[] = [
 
 const other: interfaceData[] = [
     {
-        key: 'cod',
+        id: 23,
         icon: 'qrcode-scan',
         title: 'QR Code',
         color: 'green',
@@ -204,7 +204,7 @@ const Other: React.FC = () => {
                     {konpersi.map((item) => (
                         <View style={styles.viewIconButton}>
                             <IconButton
-                                key={item.key}
+                                key={item.id}
                                 icon={item.icon}
                                 size={30}
                                 iconColor={item.color}
@@ -224,7 +224,7 @@ const Other: React.FC = () => {
                     {Edit.map((item) => (
                         <View style={styles.viewIconButton}>
                             <IconButton
-                                key={item.key}
+                                key={item.id}
                                 icon={item.icon}
                                 size={30}
                                 iconColor={item.color}
@@ -244,7 +244,7 @@ const Other: React.FC = () => {
                     {scan.map((item) => (
                         <View style={styles.viewIconButton}>
                             <IconButton
-                                key={item.key}
+                                key={item.id}
                                 icon={item.icon}
                                 size={30}
                                 iconColor={item.color}
@@ -264,7 +264,7 @@ const Other: React.FC = () => {
                     {other.map((item) => (
                         <View style={styles.viewIconButton}>
                             <IconButton
-                                key={item.key}
+                                key={item.id}
                                 icon={item.icon}
                                 size={30}
                                 iconColor={item.color}
